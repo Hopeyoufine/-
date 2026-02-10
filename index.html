@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ก๋วยเตี๋ยวเรือสุดโหด | อร่อยไม่ต้องปรุง</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* --- การตั้งค่าพื้นฐาน (Base Styles) --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* --- ส่วนหัว (Header/Navbar) --- */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #d35400; /* สีส้มอิฐ */
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #d35400;
+        }
+
+        /* --- ส่วนภาพปก (Hero Section) --- */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            background-color: #d35400;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e67e22;
+        }
+
+        /* --- เมนูแนะนำ (Menu Section) --- */
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+            color: #2c3e50;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .menu-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #ddd; /* Placeholder color */
+        }
+
+        .menu-content {
+            padding: 1.5rem;
+        }
+
+        .menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .price {
+            color: #d35400;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        /* --- เกี่ยวกับเรา & ติดต่อ (About & Contact) --- */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* --- Mobile Responsive --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .info-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; } /* ซ่อนเมนูบนมือถือเพื่อความเรียบง่าย */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">🍜 ก๋วยเตี๋ยวเรือสุดโหด</div>
+            <div class="nav-links">
+                <a href="#home">หน้าแรก</a>
+                <a href="#menu">เมนู</a>
+                <a href="#about">เรื่องราวของเรา</a>
+                <a href="#contact">ติดต่อ</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>ก๋วยเตี๋ยวเรือสุดโหด สูตรคุณยาย</h1>
+        <p>น้ำซุปเข้มข้น เส้นเหนียวนุ่ม เนื้อตุ๋นละลายในปาก</p>
+        <a href="#menu" class="btn">ดูเมนูแนะนำ</a>
+    </section>
+
+    <section class="section" id="menu">
+        <h2 class="section-title">เมนูยอดนิยม</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1555126634-323283e090fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="ก๋วยเตี๋ยวเรือ" class="menu-img">
+                <div class="menu-content">
+                    <div class="menu-header">
+                        <h3>ก๋วยเตี๋ยวเรือน้ำตก</h3>
+                        <span class="price">50฿</span>
+                    </div>
+                    <p>น้ำซุปเข้มข้น หอมเครื่องเทศ พร้อมลูกชิ้นทำเอง</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="c:\Users\room935\Downloads\asd.jpg" alt="เส้นเล็กต้มยำหมูเด้ง" class="menu-img">
+                <div class="menu-content">
+                    <div class="menu-header">
+                        <h3>เส้นเล็กต้มยำหมูเด้ง</h3>
+                        <span class="price">60฿</span>
+                    </div>
+                    <p>รสจัดจ้าน มะนาวแท้ ถั่วคั่วเองใหม่ๆ ทุกวัน</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="c:\Users\room935\Downloads\asxdd.jpg" alt="เย็นตาโฟ" class="menu-img">
+                <div class="menu-content">
+                    <div class="menu-header">
+                        <h3>เย็นตาโฟทรงเครื่อง</h3>
+                        <span class="price">60฿</span>
+                    </div>
+                    <p>ซอสแดงสูตรลับ ใส่เครื่องแน่นๆ ปลาหมึกกรอบ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="info-grid">
+            <div>
+                <h2 class="section-title" style="text-align: left;">เรื่องราวของเรา</h2>
+                <p>เปิดตำนานความอร่อยกว่า 30 ปี "เตี๋ยวรสเด็ด" เริ่มต้นจากรถเข็นคันเล็กๆ สู่ร้านที่ทุกคนวางใจ เราคัดสรรวัตถุดิบอย่างดี เคี่ยวน้ำซุปนานกว่า 8 ชั่วโมง เพื่อให้ได้รสชาติที่กลมกล่อมที่สุด</p>
+                <br>
+                <p><strong>"ไม่ดีจริง เราไม่เสิร์ฟ"</strong> คือคำมั่นสัญญาของเรา</p>
+            </div>
+            <div id="contact" class="contact-info" style="background: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                <h3 style="margin-bottom: 1rem; color: #d35400;">📍 แวะมาชิมได้ที่</h3>
+                <p><strong>ที่อยู่:</strong> 123 ถนนสุขุมวิท เขตวัฒนา กรุงเทพฯ</p>
+                <p><strong>โทร:</strong> 081-234-5678</p>
+                <p><strong>เวลาเปิด-ปิด:</strong> 09:00 - 20:00 น. (หยุดวันจันทร์)</p>
+                <br>
+                <a href="#" class="btn" style="font-size: 0.9rem;">ดูแผนที่ Google Maps</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 เตี๋ยวรสเด็ด. สงวนลิขสิทธิ์.</p>
+    </footer>
+
+</body>
+</html>
